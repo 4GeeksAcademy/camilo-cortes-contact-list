@@ -1,23 +1,26 @@
-import React from "react"
-import { Link } from "react-router-dom"
-export default function Card(props) {
+import React from "react";
+import { Link } from "react-router-dom";
+import { Modal } from "./modal"
+
+export const Card = (props) => {
+
     return (
-        <div className="card mb-3" >
+        <div className="card" >
             <div className="row g-0">
-                <div className="col-md-4">
-                    <img src="..." class="img-fluid rounded-start" alt="..." />
+                <div className="col-md-4 d-flex justify-content-center align-items-center">
+                    <img src="https://images.pexels.com/photos/885880/pexels-photo-885880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="img-profile" alt="..." />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-6">
                     <div className="card-body">
                         <h5 className="card-title">{props.name}</h5>
-                        <p className="card-text">{props.address}</p>
-                        <p className="card-text">{props.phone}</p>
-                        <p className="card-text">{props.email}</p>
+                        <p className="card-text"><i className="bi bi-geo-alt-fill"></i>{props.address}</p>
+                        <p className="card-text"><i className="bi bi-telephone-fill"></i>{props.phone}</p>
+                        <p className="card-text"><i className="bi bi-envelope-fill"></i>{props.email}</p>
                     </div>
-                    <Link>
-                        <button className="btn btn-primary" to={`edit-contact`} >edit</button>
-                    </Link>
-
+                </div>
+                <div className="col-md-2 d-flex justify-content-center align-items-center gap-3 fs-5">
+                    <Link className="bi bi-pencil-fill" to={`/edit-contact/${props.id}`}></Link>
+                    <Modal id={props.id} />
                 </div>
             </div>
         </div>
