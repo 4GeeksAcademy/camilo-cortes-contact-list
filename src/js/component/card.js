@@ -8,7 +8,7 @@ export const Card = (props) => {
         <div className="card" >
             <div className="row g-0">
                 <div className="col-md-4 d-flex justify-content-center align-items-center">
-                    <img src="https://images.pexels.com/photos/885880/pexels-photo-885880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="img-profile" alt="..." />
+                    <img src="https://picsum.photos/200" className="img-profile" alt="..." />
                 </div>
                 <div className="col-md-6">
                     <div className="card-body">

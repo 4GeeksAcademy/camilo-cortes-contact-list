@@ -13,7 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 
 				try {
-					const response = await fetch("https://playground.4geeks.com/contact/agendas/PabloQuerales/contacts/", requestOptions);
+					const response = await fetch("https://playground.4geeks.com/contact/agendas/CamiloCortes/contacts/", requestOptions);
 					const result = await response.json();
 					setStore({ contactList: result.contacts, hiddenMessage: "hidden", deleteStatus: false })
 
@@ -29,7 +29,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 
 				try {
-					const response = await fetch("https://playground.4geeks.com/contact/agendas/PabloQuerales", requestOptions);
+					const response = await fetch("https://playground.4geeks.com/contact/agendas/CamiloCortes", requestOptions);
 				} catch (error) {
 					console.error(error);
 				}
@@ -51,7 +51,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: "follow"
 				};
 				try {
-					const response = await fetch("https://playground.4geeks.com/contact/agendas/PabloQuerales/contacts", requestOptions);
+					const response = await fetch("https://playground.4geeks.com/contact/agendas/CamiloCortes/contacts", requestOptions);
 					if (response.status == 201) {
 						setStore({ hiddenMessage: "" })
 					} else {
@@ -67,7 +67,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: "follow"
 				};
 				try {
-					const response = await fetch(`https://playground.4geeks.com/contact/agendas/PabloQuerales/contacts/${id}`, requestOptions)
+					const response = await fetch(`https://playground.4geeks.com/contact/agendas/CamiloCortes/contacts/${id}`, requestOptions)
 					if (response.status == 204) {
 						setStore({ deleteStatus: true })
 					}
@@ -95,7 +95,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 
 				try {
-					const response = await fetch(`https://playground.4geeks.com/contact/agendas/PabloQuerales/contacts/${id}`, requestOptions);
+					const response = await fetch(`https://playground.4geeks.com/contact/agendas/CamiloCortes/contacts/${id}`, requestOptions);
 					if (response.status == 200) {
 						setStore({ hiddenMessage: "" })
 					} else {
